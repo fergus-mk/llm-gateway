@@ -1,0 +1,13 @@
+networks:
+  llm_gateway:
+    driver: bridge
+
+services:
+  api:
+    build: ./api
+    ports:
+      - 8000:8000
+    networks:
+      - llm_gateway
+
+    
